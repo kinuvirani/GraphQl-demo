@@ -1,0 +1,36 @@
+mutation {
+  addCategory(
+    Category_Name: "andy",
+    active: 1,
+  ) {
+    Category_id
+    Category_Name
+    active
+  }
+}
+
+query {
+  CourceAll {
+    Category_Name
+  }
+}
+
+query {
+  fetchOne(Category_id: 1) {
+    Category_Name
+    Category_id
+  }
+}
+
+mutation {
+  updateData(Category_id: 1, Category_Name: "kiran", active: 0) {
+    Category_Name
+    Category_id
+  }
+}
+
+mutation{
+  deleteData(Category_id:1) {
+    message
+  }
+}
